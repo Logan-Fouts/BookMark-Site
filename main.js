@@ -4,19 +4,20 @@ document.getElementById('inputForm').addEventListener('submit', saveBookMark);
 function saveBookMark(e) {
     console.log('Saving...');
     e.preventDefault();
+    if (document.getElementById('siteName').value.length > 10) {
+        alert("Website Name Too Long, Max Size is 10 characters");
+        return 0;
+    }
     var siteName = document.getElementById('siteName').value;
     var siteURL = document.getElementById('siteURL').value;
-
+    var disc = document.getElementById('siteDesc').value;
     var images = JSON.parse(localStorage.getItem('images'));
-    console.log(images);
-
-
-
 
     var bookMark = {
         name: siteName,
         url: siteURL,
-        img: images[0]
+        img: images[0],
+        description: disc
     } 
 
     if  (localStorage.getItem('bookmarks') === null) {
@@ -65,20 +66,56 @@ function fetchBookMarks() {
     var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
     var allBookMarks = document.getElementById('allBookMarks');
 
-    allBookMarks.innerHTML = '';
-
     for (var i = 0; i < bookmarks.length; i++) {
         var name = bookmarks[i].name;
         var url = bookmarks[i].url;
         var imageDataURL = bookmarks[i].img;
+        var description = bookmarks[i].description;
+
+        test = pingURL(url);
 
         allBookMarks.innerHTML += '<div class ="bookmarkArea">'+
-                                   '<h3>'+name+
-                                   '<img id="inlineImage" src=\''+imageDataURL+'\'/>'+
-                                   ' <button class="vord" onclick="visitSite(\''+url+'\')">Visit</button>'+
-                                   ' <button class="vord" onclick="deleteBookMark(\''+url+'\')">Delete</button>'+
+                                   '<h3>'+
+                                   '<label id=siteNameID>'+name+'</label>'+
+                                   '<img id="inlineImage" src=\''+imageDataURL+'\'/>'+ '<label id=siteDescription>'+description+'</label>'+
+                                   '<button class="v" onclick="visitSite(\''+url+'\')"><img id="searchIcon" src="/Images/search.png"></button>'+
+                                   '<button class="d" onclick="deleteBookMark(\''+url+'\')"><img id="searchIcon" src="/Images/delete.png"></button>'+
                                    '</h3>'+
                                    '</div>';
     }
 
 }
+
+
+function pingURL(URL) {
+    var settings = {
+      cache: false,
+      dataType: "jsonp",
+      async: true,
+      crossDomain: true,
+      url: URL,
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      statusCode: {
+        200: function (response) {
+          console.log("Status 200: Page is up!");
+        },
+        400: function (response) {
+          console.log("Status 400: Page is down.");
+
+        },
+        0: function (response) {
+          console.log("Status 0: Page is down.");
+        },
+      },
+    };
+    
+    // Sends the request and observes the response
+    $.ajax(settings).done(function (response) {
+    });
+  }
+
+
