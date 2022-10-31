@@ -7,9 +7,16 @@ function saveBookMark(e) {
     var siteName = document.getElementById('siteName').value;
     var siteURL = document.getElementById('siteURL').value;
 
+    var images = JSON.parse(localStorage.getItem('images'));
+    console.log(images);
+
+
+
+
     var bookMark = {
         name: siteName,
         url: siteURL,
+        img: images[0]
     } 
 
     if  (localStorage.getItem('bookmarks') === null) {
@@ -57,14 +64,13 @@ function fetchBookMarks() {
 
     var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
     var allBookMarks = document.getElementById('allBookMarks');
-    var allImages = localStorage.getItem("images");
 
     allBookMarks.innerHTML = '';
 
     for (var i = 0; i < bookmarks.length; i++) {
         var name = bookmarks[i].name;
         var url = bookmarks[i].url;
-        var imageDataURL = localStorage.getItem("images");
+        var imageDataURL = bookmarks[i].img;
 
         allBookMarks.innerHTML += '<div class ="bookmarkArea">'+
                                    '<h3>'+name+

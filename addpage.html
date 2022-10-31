@@ -24,30 +24,23 @@
             <input type="text" id="siteURL" placeholder="URL"><br><br>
         </div>
         <label for="myfile">Select a Photo:</label>
-        <input id="sitePhoto" type="file"/>
+        <input id="sitePhoto" type="file" onchange="loadImage()"/>
         <br/><br/>
-
+        <!--Creates image as data url and stores it temporarily-->
         <script>
-            document.querySelector("#sitePhoto").addEventListener("change", function() {
+            function loadImage() {
+                const file = document.querySelector('input[type=file]').files[0];
                 const reader = new FileReader();
                 reader.addEventListener("load", () => {
-                    if (localStorage.getItem('images') === null) {
-                        var images = [];
-                        images.push(JSON.stringify(reader.result));
-                        localStorage.setItem('images', JSON.stringify(images));
-                        console.log("Inside 1st");
-                    } else {
-                        var images =localStorage.getItem('images');
-                        images.push(JSON.stringify(reader.result));
-                        localStorage.setItem('images', JSON.stringify(images));
-                        console.log("Inside 2nd");
-                    }
-                    localStorage.setItem("images", reader.result);
-                });
-                reader.readAsDataURL(this.files[0]);
-            })
+                    var images = [];
+                    images.push(reader.result);
+                    localStorage.setItem('images', JSON.stringify(images));
+                }, false);
+                if (file) {
+                    reader.readAsDataURL(file);
+                }
+            }
         </script>
-
         <input type="submit" value="Submit">
     </form>
   </body>
