@@ -1,7 +1,8 @@
 /*Title*/
 #page {
-    background-image: url("Images/background.png");
+    background-image: url("Images/giphy.gif");
     background-position: left;
+    background-size: cover;
 }
 
 #siteNameID {
@@ -15,7 +16,7 @@
     position: absolute;
     top: 5px;
     left: 200px;
-    border-radius: 50%;
+    clip-path: circle();
 }
 
 #AddButton {
@@ -25,8 +26,15 @@
     width: 50px;
     height: 50px;
     background-color: #2e3435;
-    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+    box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, .8);
     border-radius: 5px;
+    transition: .5s;
+}
+
+#AddButton:hover {
+    position: relative;
+    top: 15px;
+    box-shadow: -2px 15px 10px -5px rgba(0, 0, 0, .8);
 }
 
 #addIcon {
@@ -41,14 +49,9 @@
     position: relative;
 }
 
-#statuses {
-    position: relative;
-    right: -750px;
-    top: -355px;
-    padding: 12.5px;
-}
+
 #siteDescription {
-    position: absolute; 
+    position: absolute;
     left: 280px;
     top: 15px;
     font-style: italic;
@@ -56,13 +59,13 @@
 }
 
 #inputForm {
-   margin: auto;
-   width: 20%;
-   text-align: center;
-   background-color: #2e3435;
-   padding: 70px;
-   border-radius: 5px;
-   box-shadow: 0px 25px 25px 5px rgba(0,0,0,.8);
+    margin: auto;
+    width: 20%;
+    text-align: center;
+    background-color: #2e3435;
+    padding: 70px;
+    border-radius: 5px;
+    box-shadow: 0px 25px 25px 5px rgba(0, 0, 0, .8);
 }
 
 #sitePhoto {
@@ -80,30 +83,46 @@
     font-weight: 500;
 }
 
+#up {
+    position: absolute;
+    transform: rotate(-90deg);
+    left: 70%;
+    top: 10%;
+    resize: none;
+}
+
+#down {
+    position: absolute;
+    transform: rotate(90deg);
+    left: 70%;
+    top: 10%;
+    resize: none;
+}
 
 .mainPage {
-    border:solid;
+    border: solid;
     border-radius: 10px;
-    padding-bottom: 100px;
-    box-shadow: 0px 25px 25px 5px rgba(0,0,0,.8);
-    width: 95%;
+    padding-bottom: 5%;
+    box-shadow: 0px 25px 25px 5px rgba(0, 0, 0, .8);
+    width: 85%;
     position: relative;
-    left: 2.5%;
-    top: 75px;
+    left: 7.5%;
+    top: 40px;
     background-color: #1e1e1f;
+    resize: none;
 }
 
 .banner {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     position: relative;
     top: -55px;
     height: 125px;
-    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
 }
 
 .bookmarkArea {
     background-color: #2e3435;
-    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
     font-size: 30px;
     width: 75%;
     position: relative;
@@ -121,8 +140,6 @@
     top: 15px;
 }
 
-
-/*View and Delete Buttons*/
 .v {
     position: absolute;
     top: 5px;
@@ -131,7 +148,7 @@
     height: 40px;
     background-color: #2e3435;
     border-radius: 5px;
-    background-image: linear-gradient(to right, transparent 50%, #2b26a9 50%);
+    background-image: linear-gradient(to right, transparent 50%, #1d8831 50%);
     background-size: 200%;
     background-position: 0%;
     transition: .5s;
@@ -149,7 +166,7 @@
     height: 40px;
     background-color: #2e3435;
     border-radius: 5px;
-    background-image: linear-gradient(to right, transparent 50%, #f60606 50%);
+    background-image: linear-gradient(to right, transparent 50%, #791717 50%);
     background-size: 200%;
     background-position: 0%;
     transition: .5s;

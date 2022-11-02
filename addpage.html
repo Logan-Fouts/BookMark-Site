@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en-us" id="page">
-    <div class="mainPage">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LabLogan Add BookMark</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <div class="banner">
-        <div>
-            <h1 class="title">Add BookMark</h1>
-            <button id="AddButton" onclick="openAddPage(1)"><img id="addIcon" src="Images/Home.png"></button>
-        </div>  
-    </div>
-  </head>
-  <body onload="fetchBookMarks()">
-    <!--Bookmark input form-->
-    <form id="inputForm">
-        <div>
-            <label id="WebName">Website Name:</label>
-            <input type="text" id="siteName" placeholder="Name"><br></br>
+<div class="mainPage">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LabLogan Add BookMark</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <div class="banner">
+            <div>
+                <h1 class="title">Add BookMark</h1>
+                <button id="AddButton" onclick="openAddPage(1)"><img id="addIcon" src="Images/Home.png"></button>
+            </div>
         </div>
-        <div>
-            <label id="WebName">Website URL:</label>
-            <input type="text" id="siteURL" placeholder="URL"><br></br>
-        </div>
-        <div>
-            <label id="WebName">Description:</label>
-            <input type="text" id="siteDesc" placeholder="Description"><br></br>
-        </div>
-        <label for="myfile"></label>
-        <input id="sitePhoto" type="file" onchange="loadImage()"/>
-        <br/><br/>
-        <!--Creates image as data url and stores it temporarily-->
-        <script>
-            function loadImage() {
-                const file = document.querySelector('input[type=file]').files[0];
-                const reader = new FileReader();
-                reader.addEventListener("load", () => {
-                    var images = [];
-                    images.push(reader.result);
-                    localStorage.setItem('images', JSON.stringify(images));
-                }, false);
-                if (file) {
-                    reader.readAsDataURL(file);
+    </head>
+
+    <body onload="fetchBookMarks()">
+        <!--Bookmark input form-->
+        <form id="inputForm">
+            <div>
+                <label id="WebName">Website Name:</label>
+                <input type="text" id="siteName" placeholder="Name"><br></br>
+            </div>
+            <div>
+                <label id="WebName">Website URL:</label>
+                <input type="text" id="siteURL" placeholder="URL"><br></br>
+            </div>
+            <div>
+                <label id="WebName">Description:</label>
+                <input type="text" id="siteDesc" placeholder="Description"><br></br>
+            </div>
+            <label for="myfile"></label>
+            <input id="sitePhoto" type="file" onchange="loadImage()" />
+            <br /><br />
+            <!--Creates image as data url and stores it temporarily-->
+            <script>
+                function loadImage() {
+                    const file = document.querySelector('input[type=file]').files[0];
+                    const reader = new FileReader();
+                    reader.addEventListener("load", () => {
+                        var images = [];
+                        images.push(reader.result);
+                        localStorage.setItem('images', JSON.stringify(images));
+                    }, false);
+                    if (file) {
+                        reader.readAsDataURL(file);
+                    }
                 }
-            }
-        </script>
-        <input type="submit" value="Submit">
-    </form>
+            </script>
+            <input type="submit" value="Submit">
+        </form>
     </body>
-    </div>
-  <script src="main.js"></script>
+</div>
+<script src="main.js"></script>
+
 </html>
