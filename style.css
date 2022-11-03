@@ -19,6 +19,24 @@
     clip-path: circle();
 }
 
+#submitButton1 {
+    margin: auto;
+    top: 0px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color:#1e1e1f;
+    color: rgb(231, 233, 235);
+    box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, .8);
+    transition: 1s;
+}
+
+#submitButton1:hover {
+    position: relative;
+    width: 90px;
+    height: 25px;
+}
+
 #AddButton {
     position: relative;
     left: 2%;
@@ -29,6 +47,24 @@
     box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, .8);
     border-radius: 5px;
     transition: .5s;
+}
+
+#SortButton {
+    position: relative;
+    left: 90%;
+    top: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: #2e3435;
+    box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, .8);
+    border-radius: 5px;
+    transition: .5s;
+}
+
+#SortButton:hover {
+    position: relative;
+    top: 0px;
+    box-shadow: -2px 15px 10px -5px rgba(0, 0, 0, .8);
 }
 
 #AddButton:hover {
@@ -63,7 +99,7 @@
     width: 20%;
     text-align: center;
     background-color: #2e3435;
-    padding: 70px;
+    padding: 25px;
     border-radius: 5px;
     box-shadow: 0px 25px 25px 5px rgba(0, 0, 0, .8);
 }
@@ -98,6 +134,44 @@
     top: 10%;
     resize: none;
 }
+
+#sortPopUp {
+    visibility: hidden;
+}
+
+#sortForm {
+    position: relative;
+    left: 50%;
+}
+
+#sortText {
+    background-color: black;
+    border-radius: 3px;
+    padding: 5px;
+    color: rgb(231, 233, 235);
+    font-size: 30px;
+    position: relative;
+    left: -6%;
+}
+
+#submitButton {
+    position: relative;
+    left: 12%;
+}
+
+
+.simplebookmarks {
+    background-color: #2e3435;
+    box-shadow: 5px 5px 10px 2px rgba(50, 41, 41, 0.8);
+    font-size: 30px;
+    width: 25%;
+    position: relative;
+    left: 15%;
+    border-radius: 3px;
+    height: 50px;
+    top: -50px;
+}
+
 
 .mainPage {
     border: solid;

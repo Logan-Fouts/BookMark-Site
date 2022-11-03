@@ -19,19 +19,14 @@
         <!--Bookmark input form-->
         <form id="inputForm">
             <div>
-                <label id="WebName">Website Name:</label>
+                <label id="WebName">Website Info:</label><br></br>
                 <input type="text" id="siteName" placeholder="Name"><br></br>
-            </div>
-            <div>
-                <label id="WebName">Website URL:</label>
                 <input type="text" id="siteURL" placeholder="URL"><br></br>
-            </div>
-            <div>
-                <label id="WebName">Description:</label>
                 <input type="text" id="siteDesc" placeholder="Description"><br></br>
             </div>
             <label for="myfile"></label>
-            <input id="sitePhoto" type="file" onchange="loadImage()" />
+            <input id="sitePhoto" type="file" onchange="loadImage()" /><br></br>
+            <input type="submit" value="Submit" id="submitButton1">
             <br /><br />
             <!--Creates image as data url and stores it temporarily-->
             <script>
@@ -48,7 +43,6 @@
                     }
                 }
             </script>
-            <input type="submit" value="Submit">
         </form>
     </body>
 </div>

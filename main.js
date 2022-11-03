@@ -100,8 +100,7 @@ async function fetchBookMarks() {
                 statsrc = '<img id="down" src="/Images/rncarrow.gif"><br></br>';
             }
             allBookMarks.innerHTML += '<div class ="bookmarkArea">' +
-                '<h3>' +
-                '<label id=siteNameID>' + name + '</label>' +
+                '<h3>' + '<label id=siteNameID>' + name + '</label>' +
                 '<img id="inlineImage" src=\'' + imageDataURL + '\'/>' + '<label id=siteDescription>' + description + '</label>' +
                 statsrc +
                 '<button class="v" onclick="visitSite(\'' + url + '\')"><img id="searchIcon" src="/Images/search.png"></button>' +
@@ -151,4 +150,41 @@ function pingURL(URL, map, i) {
     });
 }
 
+function openSortPage() {
+    location.replace("./sortpage.html");
+}
 
+function loadSortPage() {
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+    var sortArea = document.getElementById('allBookMarks');
+    const map = new Map();
+
+    // First gets the status of every website.
+    for (var i = 0; i < bookmarks.length; i++) {
+        var name = bookmarks[i].name;
+        sortArea.innerHTML += '<div class ="simplebookmarks">' +
+            '<label id=siteNameID> <center>' + i + ' ' + name + '</center> </label>' +
+            '</div>' + '<br></br>';
+    }
+}
+
+function sort() {
+    var item1 = document.getElementById('item1').value;
+    var item2 = document.getElementById('item2').value;
+    console.log(item1);
+    if (item1.length == 0 || item2.length == 0) {
+        alert('You Must Fill Out Both Fields');
+        return 0;
+    }
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+
+    console.log('sorting items ' + item1 +' and '+ item2);
+    var temp = bookmarks[item1];
+    bookmarks[item1] = bookmarks[item2]; 
+    bookmarks[item2] = temp; 
+
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+
+    location.reload(true);
+
+}
