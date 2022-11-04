@@ -9,24 +9,25 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <div class="banner">
             <div>
-                <h1 class="title">Add BookMark</h1>
+                <h1 class="title">Edit BookMark</h1>
                 <button id="AddButton" onclick="redirect(1)"><img id="buttonIcon" src="Images/Home.png"></button>
             </div>
         </div>
     </head>
 
-    <body onload="fetchBookMarks()">
+    <body>
         <!--Bookmark input form-->
-        <form id="inputForm">
+        <form id="editForm">
             <div>
-                <label id="WebName">Website Info:</label><br></br>
-                <input type="text" id="siteName" placeholder="Name"><br></br>
-                <input type="text" id="siteURL" placeholder="URL"><br></br>
-                <input type="text" id="siteDesc" placeholder="Description"><br></br>
+                <label id="WebName">New Website Info:</label><br></br>
+                <label>You Must Fill Out All Fields</label><br></br>
+                <input type="text" id="newsiteName" placeholder="Name"><br></br>
+                <input type="text" id="newsiteURL" placeholder="URL"><br></br>
+                <input type="text" id="newsiteDesc" placeholder="Description"><br></br>
             </div>
             <label for="myfile"></label>
             <input id="sitePhoto" type="file" onchange="loadImage()" /><br></br>
-            <input type="submit" value="Submit" id="submitButton">
+            <input type="submit" value="Submit" id="submitButton" onclick="submitEdit()">
             <br /><br />
         </form>
     </body>

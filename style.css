@@ -1,22 +1,19 @@
-/*Title*/
-#page {
-    background-image: url("Images/giphy.gif");
-    background-position: left;
-    background-size: cover;
+#submitButton {
+    margin: auto;
+    top: 0px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #1e1e1f;
+    color: rgb(231, 233, 235);
+    box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, .8);
+    transition: 1s;
 }
 
-#siteNameID {
+#submitButton:hover {
     position: relative;
-    top: 5px;
-    left: 10px;
-}
-
-#inlineImage {
-    height: 40px;
-    position: absolute;
-    top: 5px;
-    left: 200px;
-    clip-path: circle();
+    width: 90px;
+    height: 25px;
 }
 
 #AddButton {
@@ -37,7 +34,7 @@
     box-shadow: -2px 15px 10px -5px rgba(0, 0, 0, .8);
 }
 
-#addIcon {
+#buttonIcon {
     width: 40px;
     position: relative;
     left: -3px;
@@ -49,6 +46,25 @@
     position: relative;
 }
 
+#page {
+    background-image: url("Images/giphy.gif");
+    background-position: left;
+    background-size: cover;
+}
+
+#siteNameID {
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+
+#inlineImage {
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    left: 200px;
+    clip-path: circle();
+}
 
 #siteDescription {
     position: absolute;
@@ -63,7 +79,17 @@
     width: 20%;
     text-align: center;
     background-color: #2e3435;
-    padding: 70px;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 25px 25px 5px rgba(0, 0, 0, .8);
+}
+
+#editForm {
+    margin: auto;
+    width: 20%;
+    text-align: center;
+    background-color: #2e3435;
+    padding: 25px;
     border-radius: 5px;
     box-shadow: 0px 25px 25px 5px rgba(0, 0, 0, .8);
 }
@@ -99,7 +125,39 @@
     resize: none;
 }
 
-.mainPage {
+#sortForm {
+    position: relative;
+    left: 50%;
+}
+
+#sortText {
+    background-color: black;
+    border-radius: 3px;
+    padding: 5px;
+    color: rgb(231, 233, 235);
+    font-size: 30px;
+    position: relative;
+    left: -6%;
+}
+
+#editIcon {
+    width: 120%;
+}
+
+.simplebookmarks {
+    background-color: #2e3435;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    width: 25%;
+    position: relative;
+    left: 35%;
+    border-radius: 3px;
+    height: 50px;
+    top: -50px;
+}
+
+
+.theme {
     border: solid;
     border-radius: 10px;
     padding-bottom: 5%;
@@ -173,5 +231,24 @@
 }
 
 .d:hover {
+    background-position: 100%;
+}
+
+.e {
+    position: relative;
+    top: -73px;
+    left: 102%;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #2e3435;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, transparent 50%, #97ad45 50%);
+    background-size: 200%;
+    background-position: 0%;
+    transition: .5s;
+}
+
+.e:hover {
     background-position: 100%;
 }

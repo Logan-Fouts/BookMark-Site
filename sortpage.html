@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us" id="page">
+<div class="theme">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabLogan Sort Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <div class="banner">
+      <div>
+        <h1 class="title">Sort BookMarks</h1>
+        <button id="AddButton" onclick="redirect(1)"><img id="buttonIcon" src="Images/Home.png"></button>
+        <button id="AddButton" onclick="alert('Click and Drag Items To Sort')"><img id="buttonIcon"
+            src="Images/qmark.png"></button>
+      </div>
+    </div>
+  </head>
+
+  <body onload="loadSortPage()">
+    <div class="row marketing">
+      <ul id="sortlist"></ul>
+    </div>
+  </body>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="main.js"></script>
+
+</html>
