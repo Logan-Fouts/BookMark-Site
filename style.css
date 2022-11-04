@@ -1,4 +1,51 @@
-/*Title*/
+#submitButton {
+    margin: auto;
+    top: 0px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #1e1e1f;
+    color: rgb(231, 233, 235);
+    box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, .8);
+    transition: 1s;
+}
+
+#submitButton:hover {
+    position: relative;
+    width: 90px;
+    height: 25px;
+}
+
+#AddButton {
+    position: relative;
+    left: 2%;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #2e3435;
+    box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, .8);
+    border-radius: 5px;
+    transition: .5s;
+}
+
+#AddButton:hover {
+    position: relative;
+    top: 15px;
+    box-shadow: -2px 15px 10px -5px rgba(0, 0, 0, .8);
+}
+
+#buttonIcon {
+    width: 40px;
+    position: relative;
+    left: -3px;
+    top: 1px;
+}
+
+#searchIcon {
+    width: 40%;
+    position: relative;
+}
+
 #page {
     background-image: url("Images/giphy.gif");
     background-position: left;
@@ -19,73 +66,6 @@
     clip-path: circle();
 }
 
-#submitButton1 {
-    margin: auto;
-    top: 0px;
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    background-color:#1e1e1f;
-    color: rgb(231, 233, 235);
-    box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, .8);
-    transition: 1s;
-}
-
-#submitButton1:hover {
-    position: relative;
-    width: 90px;
-    height: 25px;
-}
-
-#AddButton {
-    position: relative;
-    left: 2%;
-    top: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: #2e3435;
-    box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, .8);
-    border-radius: 5px;
-    transition: .5s;
-}
-
-#SortButton {
-    position: relative;
-    left: 90%;
-    top: 5px;
-    width: 50px;
-    height: 50px;
-    background-color: #2e3435;
-    box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, .8);
-    border-radius: 5px;
-    transition: .5s;
-}
-
-#SortButton:hover {
-    position: relative;
-    top: 0px;
-    box-shadow: -2px 15px 10px -5px rgba(0, 0, 0, .8);
-}
-
-#AddButton:hover {
-    position: relative;
-    top: 15px;
-    box-shadow: -2px 15px 10px -5px rgba(0, 0, 0, .8);
-}
-
-#addIcon {
-    width: 40px;
-    position: relative;
-    left: -3px;
-    top: 1px;
-}
-
-#searchIcon {
-    width: 40%;
-    position: relative;
-}
-
-
 #siteDescription {
     position: absolute;
     left: 280px;
@@ -95,6 +75,16 @@
 }
 
 #inputForm {
+    margin: auto;
+    width: 20%;
+    text-align: center;
+    background-color: #2e3435;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 25px 25px 5px rgba(0, 0, 0, .8);
+}
+
+#editForm {
     margin: auto;
     width: 20%;
     text-align: center;
@@ -135,10 +125,6 @@
     resize: none;
 }
 
-#sortPopUp {
-    visibility: hidden;
-}
-
 #sortForm {
     position: relative;
     left: 50%;
@@ -154,26 +140,24 @@
     left: -6%;
 }
 
-#submitButton {
-    position: relative;
-    left: 12%;
+#editIcon {
+    width: 120%;
 }
-
 
 .simplebookmarks {
     background-color: #2e3435;
-    box-shadow: 5px 5px 10px 2px rgba(50, 41, 41, 0.8);
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
     font-size: 30px;
     width: 25%;
     position: relative;
-    left: 15%;
+    left: 35%;
     border-radius: 3px;
     height: 50px;
     top: -50px;
 }
 
 
-.mainPage {
+.theme {
     border: solid;
     border-radius: 10px;
     padding-bottom: 5%;
@@ -247,5 +231,24 @@
 }
 
 .d:hover {
+    background-position: 100%;
+}
+
+.e {
+    position: relative;
+    top: -73px;
+    left: 102%;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #2e3435;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, transparent 50%, #97ad45 50%);
+    background-size: 200%;
+    background-position: 0%;
+    transition: .5s;
+}
+
+.e:hover {
     background-position: 100%;
 }

@@ -1,35 +1,28 @@
 <!DOCTYPE html>
 <html lang="en-us" id="page">
-<div class="mainPage">
+<div class="theme">
 
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LabLogan DashBoard</title>
+    <title>LabLogan Sort Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <div class="banner">
       <div>
-        <h1 class="title">Home Lab DashBoard</h1>
-        <button id="AddButton" onclick="openAddPage(1)"><img id="addIcon"
-            src="Images/Home.png"></button>
+        <h1 class="title">Sort BookMarks</h1>
+        <button id="AddButton" onclick="redirect(1)"><img id="buttonIcon" src="Images/Home.png"></button>
+        <button id="AddButton" onclick="alert('Click and Drag Items To Sort')"><img id="buttonIcon"
+            src="Images/qmark.png"></button>
       </div>
     </div>
   </head>
 
   <body onload="loadSortPage()">
     <div class="row marketing">
-      <div id="allBookMarks" class="col-lg-12">
-        <div id="sortForm">
-          <label id="sortText">Enter The Indexes Of The Two Items To Swap</label> <br></br>
-          <input type="text" placeholder="Item 1" name="" id="item1">
-          <input type="text" name="" placeholder="Item 2" id="item2"> <br></br>
-          <input type="submit" value="Submit" id="submitButton" onclick="sort()">
-        </div>
-      </div>
+      <ul id="sortlist"></ul>
     </div>
   </body>
 </div>
-<label id="statusArea"></label>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="main.js"></script>
 
