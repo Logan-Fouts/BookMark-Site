@@ -17,11 +17,11 @@
 }
 
 #AddButton {
-    position: relative;
+    position: absolute;
     left: 2%;
-    top: 20px;
-    width: 50px;
-    height: 50px;
+    top: 170px;
+    width: 3%;
+    height: 35%;
     background-color: #2e3435;
     box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, .8);
     border-radius: 5px;
@@ -29,20 +29,42 @@
 }
 
 #AddButton:hover {
-    position: relative;
-    top: 15px;
+    position: absolute;
+    top: 160px;
+    box-shadow: -2px 15px 10px -5px rgba(0, 0, 0, .8);
+}
+
+#SortButton {
+    position: absolute;
+    left: 6%;
+    top: 170px;
+    width: 3%;
+    height: 35%;
+    background-color: #2e3435;
+    box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, .8);
+    border-radius: 5px;
+    transition: .5s;
+}
+
+#SortButton:hover {
+    position: absolute;
+    top: 160px;
     box-shadow: -2px 15px 10px -5px rgba(0, 0, 0, .8);
 }
 
 #buttonIcon {
-    width: 40px;
+    width: 100%;
+    max-width: 40px;
+    min-width: 10px;
     position: relative;
-    left: -3px;
-    top: 1px;
+    left: .5%;
+    top: -1%;
 }
 
 #searchIcon {
     width: 40%;
+    max-width: 35px;
+    min-width: 10px;
     position: relative;
 }
 
@@ -142,6 +164,23 @@
 
 #editIcon {
     width: 120%;
+    max-width: 20px;
+    min-width: 5px;
+}
+
+#mainbody {
+    position: relative;
+    height: 100%;
+}
+
+#htmlelement {
+    position: relative;
+    height: 100%;
+}
+
+#allBookMarks {
+    position: relative;
+    height: 100%;
 }
 
 .simplebookmarks {
@@ -186,12 +225,12 @@
     position: relative;
     left: 15%;
     border-radius: 3px;
-    height: 50px;
+    max-height: 50px;
     top: -50px;
 }
 
 .title {
-    font-size: 80px;
+    font-size: 500%;
     color: rgb(231, 233, 235);
     text-align: center;
     position: relative;
@@ -200,9 +239,9 @@
 
 .v {
     position: absolute;
-    top: 5px;
-    right: 120px;
-    width: 100px;
+    top: 10%;
+    right: 13%;
+    width: 10%;
     height: 40px;
     background-color: #2e3435;
     border-radius: 5px;
@@ -218,9 +257,9 @@
 
 .d {
     position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 100px;
+    top: 10%;
+    right: 1%;
+    width: 10%;
     height: 40px;
     background-color: #2e3435;
     border-radius: 5px;
@@ -239,8 +278,8 @@
     top: -73px;
     left: 102%;
     right: 5px;
-    width: 40px;
-    height: 40px;
+    width: 3%;
+    height: 3%;
     background-color: #2e3435;
     border-radius: 5px;
     background-image: linear-gradient(to right, transparent 50%, #97ad45 50%);

@@ -62,7 +62,7 @@ function saveBookMark(e) {
     location.reload(true);
 
     localStorage.setItem('images', null);
-    localStorage.removeItem('tempURL');
+    localStorage.setItem('tempURL', null);
 }
 
 /**Redirects user to desired webpage.*/
@@ -168,10 +168,12 @@ function pingURL(URL, map, i) {
 
             },
             400: function (response) {
-                responses.push("down");
+                map.set(i, 'down');
+                console.log('SiteDown');
             },
             0: function (response) {
-                responses.push("down");
+                map.set(i, 'down');
+                console.log('SiteDown');
             },
         },
     };
@@ -205,7 +207,7 @@ function draggable(bookmarks) {
         });
 
         i.addEventListener("dragenter", function () {
-
+            
         });
 
         i.addEventListener("dragleave", function () {
