@@ -1,9 +1,12 @@
-@media (max-width: 767px) {
+@media (max-width: 550px) {
     #siteDescription {
       display: none;
     }
     #inlineImage {
-        display:none;
+        display: none;
+    }
+    #siteDescription {
+        display: none;
     }
   }
 
@@ -75,6 +78,7 @@
     width: 40%;
     position: relative;
     min-width: 20px;
+    max-width: 35px;
     margin: 0 auto;
 }
 
@@ -99,9 +103,9 @@
 }
 
 #siteDescription {
-    position: absolute;
+    position: relative;
+    margin: auto;
     left: 30%;
-    top: 15px;
     font-style: italic;
     font-size:calc(10px + .5vw);
 }
@@ -142,18 +146,19 @@
 }
 
 #up {
-    position: absolute;
+    display: flex;
+    position: relative;
     transform: rotate(-90deg);
-    left: 65%;
-    top: 10%;
-    resize: none;
+    left: 62%;
+    top: -30px; 
 }
 
 #down {
-    position: absolute;
+    display: flex;
+    position: relative;
     transform: rotate(90deg);
-    left: 65%;
-    top: 10%;
+    left: 62%;
+    top: -30px;
     resize: none;
 }
 
@@ -222,7 +227,7 @@
 }
 
 .title {
-    font-size:calc(40px + 3vw);
+    font-size:calc(40px + 1vw);
     color: rgb(231, 233, 235);
     text-align: center;
     position: relative;
@@ -230,13 +235,14 @@
 }
 
 .v {
-    position: absolute;
-    top: 10%;
-    right: 13%;
+    position: relative;
+    top: -145px;
+    right: -75%;
     width: 10%;
     max-width: 120px;
     min-width: 35px;
     height: 40px;
+    max-height: 40px ;
     background-color: #2e3435;
     border-radius: 5px;
     background-image: linear-gradient(to right, transparent 50%, #1d8831 50%);
@@ -250,13 +256,14 @@
 }
 
 .d {
-    position: absolute;
-    top: 10%;
-    right: 1%;
+    position: relative;
+    top: -145px;
+    right: -76%;
     width: 10%;
     max-width: 120px;
     min-width: 35px;
     height: 40px;
+    max-height: 40px;
     background-color: #2e3435;
     border-radius: 5px;
     background-image: linear-gradient(to right, transparent 50%, #791717 50%);
@@ -271,11 +278,12 @@
 
 .e {
     position: relative;
-    top: -73px;
-    left: 102%;
-    right: 5px;
-    width: 40px;
-    height: 40px;
+    top: -150px;
+    left: 80%;
+    width: 10%;
+    height: 10%;
+    max-width: 40px;
+    max-height: 40px;
     background-color: #2e3435;
     border-radius: 5px;
     background-image: linear-gradient(to right, transparent 50%, #97ad45 50%);
