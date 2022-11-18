@@ -1,12 +1,11 @@
 @media (max-width: 550px) {
-    #siteDescription {
-      display: none;
-    }
     #inlineImage {
         display: none;
     }
+  }
+  @media (max-width: 1132px) {
     #siteDescription {
-        display: none;
+      display: none;
     }
   }
 
@@ -103,10 +102,11 @@
 }
 
 #siteDescription {
-    position: relative;
-    margin: auto;
-    left: 30%;
+    position: absolute;
+    left: 280px;
+    top: 15px;
     font-style: italic;
+    max-width: 25%;
     font-size:calc(10px + .5vw);
 }
 
@@ -280,9 +280,10 @@
     position: relative;
     top: -150px;
     left: 80%;
-    width: 10%;
+    width: 4%;
     height: 10%;
-    max-width: 40px;
+    max-width: 30px;
+    min-width: 30px;
     max-height: 40px;
     background-color: #2e3435;
     border-radius: 5px;
