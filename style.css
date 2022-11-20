@@ -2,12 +2,13 @@
     #inlineImage {
         display: none;
     }
-  }
-  @media (max-width: 1177px) {
+}
+
+@media (max-width: 1177px) {
     #siteDescription {
-      display: none;
+        display: none;
     }
-  }
+}
 
 #submitButton {
     margin: auto;
@@ -107,7 +108,7 @@
     top: 15px;
     font-style: italic;
     max-width: 25%;
-    font-size:calc(10px + .5vw);
+    font-size: calc(10px + .5vw);
 }
 
 #inputForm {
@@ -115,6 +116,7 @@
     margin: auto;
     width: 20%;
     min-width: 150px;
+    max-width: 300px;
     top: -50px;
     text-align: center;
     background-color: #2e3435;
@@ -124,8 +126,12 @@
 }
 
 #editForm {
+    position: relative;
     margin: auto;
     width: 20%;
+    min-width: 150px;
+    max-width: 300px;
+    top: -50px;
     text-align: center;
     background-color: #2e3435;
     padding: 25px;
@@ -133,12 +139,7 @@
     box-shadow: 0px 25px 25px 5px rgba(0, 0, 0, .8);
 }
 
-#sitePhoto {
-    position: relative;
-    padding: 20px;
-}
-
-#WebName {
+#subHeading {
     font-size: 40px;
     font-weight: 550;
 }
@@ -147,17 +148,13 @@
     font-size: 30px;
     font-weight: 500;
 }
-.in {
-    position: relative;
-    width: 80%;
-}
 
 #up {
     display: flex;
     position: relative;
     transform: rotate(-90deg);
     left: 62%;
-    top: -30px; 
+    top: -30px;
 }
 
 #down {
@@ -186,6 +183,11 @@
 
 #editIcon {
     width: 120%;
+}
+
+.in {
+    position: relative;
+    width: 80%;
 }
 
 .simplebookmarks {
@@ -236,7 +238,7 @@
 }
 
 .title {
-    font-size:calc(40px + 1vw);
+    font-size: calc(40px + 1vw);
     color: rgb(231, 233, 235);
     text-align: center;
     position: relative;
@@ -251,7 +253,7 @@
     max-width: 120px;
     min-width: 35px;
     height: 40px;
-    max-height: 40px ;
+    max-height: 40px;
     background-color: #2e3435;
     border-radius: 5px;
     background-image: linear-gradient(to right, transparent 50%, #1d8831 50%);
