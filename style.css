@@ -1,7 +1,20 @@
+@media (max-width: 620px) {
+    #inlineImage {
+        display: none;
+    }
+  }
+  @media (max-width: 1177px) {
+    #siteDescription {
+      display: none;
+    }
+  }
+
 #submitButton {
     margin: auto;
     top: 0px;
-    width: 100px;
+    width: 50%;
+    min-width: 60px;
+    max-width: 90px;
     height: 30px;
     border-radius: 5px;
     background-color: #1e1e1f;
@@ -17,11 +30,12 @@
 }
 
 #AddButton {
+    display: flex;
     position: relative;
-    left: 2%;
-    top: 20px;
-    width: 50px;
-    height: 50px;
+    top: -70px;
+    left: 1%;
+    width: 40px;
+    height: 40px;
     background-color: #2e3435;
     box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, .8);
     border-radius: 5px;
@@ -30,20 +44,41 @@
 
 #AddButton:hover {
     position: relative;
-    top: 15px;
+    top: -80px;
+    box-shadow: -2px 15px 10px -5px rgba(0, 0, 0, .8);
+}
+
+#SortButton {
+    display: flex;
+    position: relative;
+    top: -50px;
+    left: 1%;
+    width: 40px;
+    height: 40px;
+    background-color: #2e3435;
+    box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, .8);
+    border-radius: 5px;
+    transition: .5s;
+}
+
+#SortButton:hover {
+    position: relative;
+    top: -40px;
     box-shadow: -2px 15px 10px -5px rgba(0, 0, 0, .8);
 }
 
 #buttonIcon {
-    width: 40px;
+    width: 2vh;
     position: relative;
-    left: -3px;
-    top: 1px;
+    margin: auto;
 }
 
 #searchIcon {
     width: 40%;
     position: relative;
+    min-width: 20px;
+    max-width: 35px;
+    margin: 0 auto;
 }
 
 #page {
@@ -62,7 +97,7 @@
     height: 40px;
     position: absolute;
     top: 5px;
-    left: 200px;
+    left: 15vh;
     clip-path: circle();
 }
 
@@ -71,12 +106,16 @@
     left: 280px;
     top: 15px;
     font-style: italic;
-    font-size: 20px;
+    max-width: 25%;
+    font-size:calc(10px + .5vw);
 }
 
 #inputForm {
+    position: relative;
     margin: auto;
     width: 20%;
+    min-width: 150px;
+    top: -50px;
     text-align: center;
     background-color: #2e3435;
     padding: 25px;
@@ -108,20 +147,25 @@
     font-size: 30px;
     font-weight: 500;
 }
+.in {
+    position: relative;
+    width: 80%;
+}
 
 #up {
-    position: absolute;
+    display: flex;
+    position: relative;
     transform: rotate(-90deg);
-    left: 70%;
-    top: 10%;
-    resize: none;
+    left: 62%;
+    top: -30px; 
 }
 
 #down {
-    position: absolute;
+    display: flex;
+    position: relative;
     transform: rotate(90deg);
-    left: 70%;
-    top: 10%;
+    left: 62%;
+    top: -30px;
     resize: none;
 }
 
@@ -149,13 +193,13 @@
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
     font-size: 30px;
     width: 25%;
+    min-width: 120px;
     position: relative;
-    left: 35%;
+    margin: auto;
     border-radius: 3px;
     height: 50px;
-    top: -50px;
+    top: -150px;
 }
-
 
 .theme {
     border: solid;
@@ -168,13 +212,14 @@
     top: 40px;
     background-color: #1e1e1f;
     resize: none;
+    min-width: 250px;
 }
 
 .banner {
     background-color: rgb(0, 0, 0);
     position: relative;
-    top: -55px;
-    height: 125px;
+    top: -8vh;
+    height: 11vh;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
 }
 
@@ -182,28 +227,31 @@
     background-color: #2e3435;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
     font-size: 30px;
-    width: 75%;
+    width: 70%;
     position: relative;
     left: 15%;
     border-radius: 3px;
     height: 50px;
-    top: -50px;
+    top: -14.5vh;
 }
 
 .title {
-    font-size: 80px;
+    font-size:calc(40px + 1vw);
     color: rgb(231, 233, 235);
     text-align: center;
     position: relative;
-    top: 15px;
+    top: 40px;
 }
 
 .v {
-    position: absolute;
-    top: 5px;
-    right: 120px;
-    width: 100px;
+    position: relative;
+    top: -145px;
+    right: -75%;
+    width: 10%;
+    max-width: 120px;
+    min-width: 35px;
     height: 40px;
+    max-height: 40px ;
     background-color: #2e3435;
     border-radius: 5px;
     background-image: linear-gradient(to right, transparent 50%, #1d8831 50%);
@@ -217,11 +265,14 @@
 }
 
 .d {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 100px;
+    position: relative;
+    top: -145px;
+    right: -76%;
+    width: 10%;
+    max-width: 120px;
+    min-width: 35px;
     height: 40px;
+    max-height: 40px;
     background-color: #2e3435;
     border-radius: 5px;
     background-image: linear-gradient(to right, transparent 50%, #791717 50%);
@@ -236,11 +287,13 @@
 
 .e {
     position: relative;
-    top: -73px;
-    left: 102%;
-    right: 5px;
-    width: 40px;
-    height: 40px;
+    top: -150px;
+    left: 77%;
+    width: 4%;
+    height: 10%;
+    max-width: 30px;
+    min-width: 30px;
+    max-height: 40px;
     background-color: #2e3435;
     border-radius: 5px;
     background-image: linear-gradient(to right, transparent 50%, #97ad45 50%);

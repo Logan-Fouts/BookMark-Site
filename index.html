@@ -12,9 +12,6 @@
     <div class="banner">
       <div>
         <h1 class="title">Home Lab DashBoard</h1>
-        <button id="AddButton" onclick="redirect(0)"><img id="buttonIcon"
-            src="Images/8666718_plus_circle_icon.png"></button>
-        <button id="AddButton" onclick="redirect(2)"><img id="buttonIcon" src="Images/sort1.png"></button>
       </div>
     </div>
   </head>
@@ -22,6 +19,9 @@
   <!--Where all bookmarks will loaded-->
 
   <body onload="fetchBookMarks()">
+    <button id="AddButton" onclick="redirect(0)"><img id="buttonIcon"
+      src="Images/8666718_plus_circle_icon.png"></button>
+  <button id="SortButton" onclick="redirect(2)"><img id="buttonIcon" src="Images/sort1.png"></button>
     <div id="allBookMarks"></div>
   </body>
 </div>
