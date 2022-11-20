@@ -10,19 +10,19 @@
         <div class="banner">
             <div>
                 <h1 class="title">Add BookMark</h1>
-                <button id="AddButton" onclick="redirect(1)"><img id="buttonIcon" src="Images/Home.png"></button>
             </div>
         </div>
     </head>
 
     <body onload="fetchBookMarks()">
+        <button id="AddButton" onclick="redirect(1)"><img id="buttonIcon" src="Images/Home.png"></button>
         <!--Bookmark input form-->
         <form id="inputForm">
             <div>
                 <label id="WebName">Website Info:</label><br></br>
-                <input type="text" id="siteName" placeholder="Name"><br></br>
-                <input type="text" id="siteURL" placeholder="URL"><br></br>
-                <input type="text" id="siteDesc" placeholder="Description"><br></br>
+                <input type="text" id="siteName" class="in" placeholder="Name"><br></br>
+                <input type="text" id="siteURL" class="in" placeholder="URL"><br></br>
+                <input type="text" id="siteDesc" class="in" placeholder="Description"><br></br>
             </div>
             <label for="myfile"></label>
             <input id="sitePhoto" type="file" onchange="loadImage()" /><br></br>

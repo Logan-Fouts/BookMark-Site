@@ -10,20 +10,20 @@
         <div class="banner">
             <div>
                 <h1 class="title">Edit BookMark</h1>
-                <button id="AddButton" onclick="redirect(1)"><img id="buttonIcon" src="Images/Home.png"></button>
             </div>
         </div>
     </head>
 
     <body>
+        <button id="AddButton" onclick="redirect(1)"><img id="buttonIcon" src="Images/Home.png"></button>
         <!--Bookmark input form-->
-        <form id="editForm">
+        <form id="inputForm">
             <div>
                 <label id="WebName">New Website Info:</label><br></br>
                 <label>You Must Fill Out All Fields</label><br></br>
-                <input type="text" id="newsiteName" placeholder="Name"><br></br>
-                <input type="text" id="newsiteURL" placeholder="URL"><br></br>
-                <input type="text" id="newsiteDesc" placeholder="Description"><br></br>
+                <input type="text" id="newsiteName" class="in" placeholder="Name"><br></br>
+                <input type="text" id="newsiteURL" class="in" placeholder="URL"><br></br>
+                <input type="text" id="newsiteDesc" class="in" placeholder="Description"><br></br>
             </div>
             <label for="myfile"></label>
             <input id="sitePhoto" type="file" onchange="loadImage()" /><br></br>
