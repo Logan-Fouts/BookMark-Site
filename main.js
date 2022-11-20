@@ -1,21 +1,24 @@
+/**Null Image.*/
+let nullimg = '["data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0Q' +
+    'A/wD/AP+gvaeTAAAEA0lEQVRoge3ay2tcdRQH8E/TNom2PmrUKhaMuJAG1PoAldaComJFiI9qxKobVwpC7X9RFbQqSlyICzeCCIUoPkAoK' +
+    'rqQutCY1LYRUhSxUigRq2lqXPw6eHPmzsydO3cmXfQLP5jhntd3fo9zfucOZ3FmYUWFttZhK7ZgBFfjUqxBH+ZwFDOYxFfYh2Nt+nkQb2A' +
+    'VnsH7FcRuADvwMRaw2OaYx6d4HP0F/I3hZEb/aKcEBrELv5QIvtH4DTulH6cIiZpOaWzDoQoJxDGDewqQOImHyhAYlNZmsyD24yVsx3XSv' +
+    'lmNczGMW08HNY7DLWy9Kc1OIxJjZUisx7cNHB7HblxTwu7G06RONLD9Y5UkhnEwx8k8XsSFZYwGrMcenMrxU9lM5JGYlJZO1dgq7ZFKSQz' +
+    'KX04fSLmhW3g6x2dpEuRv7LexstNIm6DVxm50NDfENvkzsZwkLsA3uKOowQEcCAYP4LzKQq7HI+pJLEhVA/+TqO3P1UWM7goG53VnY9fQa' +
+    'iZWSHVZ9vnOVkYH1JcdL1QceBZFk91bQeaIVDQ2xI6gcFw1eSIP7WTsy/FnkB1tZvyTILy7qqgDypQdrwX5DxsJrlNfipcpO1qhbO10U45' +
+    'O7gH0QBDcX0XUAZ0WgJNB9+7ag76M0Jag9HnJYBthDO9aukkX8ATeK2hjX/i+OU9owlK229sKszmqKsWfCjY+yhP6KQhdWyrkelR5n9ikw' +
+    'PL/IwhdVMJRRKWXImwItmbzhP4JQkWaAc3Qquwog3OCvb/yhOaDUCelejdIkCqPrM2/84SOBaGrSjqrejllcXGwm9sOihXvLSUcdZMEXB9' +
+    'sT9UeZPPITFAabtNJFXmiFWKlcbD2IUtkMgjd2YaDXpCA28L3qTyhhy2dtsMFjXd7OWXxffBzf57QUE5AG1sY7iWJkeBnHuc3Ev4sCI83M' +
+    'dxLEqQOZtbXRDPheLE6IfW2InpNYkh6LZH191gzhQGpw51V2BNkek0CXgn+ZhWoPJ4PSqekDiDLQ+KGHJ/PFVEcxM9BcUbqAPaaxFpMB5/' +
+    'T2mjU3RuU80a3SazC3uDzX9zVrqFxy0vinRy/cb8WwqCUOXtNYq36mViUOo2lrhbLtbHjnliUCtpLyhgs0lD+Uno9dlkHgdcwJB2x0WeNx' +
+    'JVljBbtiteezeFV3FjC14iUsWOyyy6nrsxEP75u4HQRP+B1PCndHTZI19N+6VffhEfxsvoCMJ5Oe5TcE6MtSNSwGd81CaLTMa3EEZvFkQI' +
+    'kaliJZ9Unzk7GrJSx234rFfFrQRJZ9OE+6bjM26hFkuqEVAB21LXJ/qlmVOp4L0j11t42ba2R7vm342ZcITULhqQEN4ffpX9NTOELqQU6V' +
+    'z78szhz8R97QrguyjuKPgAAAABJRU5ErkJggg=="]';
+
 /**When form is submitted call the saveBookMark function, and set the empty icon field.*/
 try {
     document.getElementById('inputForm').addEventListener('submit', saveBookMark);
-    localStorage.setItem('images', '["data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0Q' +
-        'A/wD/AP+gvaeTAAAEA0lEQVRoge3ay2tcdRQH8E/TNom2PmrUKhaMuJAG1PoAldaComJFiI9qxKobVwpC7X9RFbQqSlyICzeCCIUoPkAoK' +
-        'rqQutCY1LYRUhSxUigRq2lqXPw6eHPmzsydO3cmXfQLP5jhntd3fo9zfucOZ3FmYUWFttZhK7ZgBFfjUqxBH+ZwFDOYxFfYh2Nt+nkQb2A' +
-        'VnsH7FcRuADvwMRaw2OaYx6d4HP0F/I3hZEb/aKcEBrELv5QIvtH4DTulH6cIiZpOaWzDoQoJxDGDewqQOImHyhAYlNZmsyD24yVsx3XSv' +
-        'lmNczGMW08HNY7DLWy9Kc1OIxJjZUisx7cNHB7HblxTwu7G06RONLD9Y5UkhnEwx8k8XsSFZYwGrMcenMrxU9lM5JGYlJZO1dgq7ZFKSQz' +
-        'KX04fSLmhW3g6x2dpEuRv7LexstNIm6DVxm50NDfENvkzsZwkLsA3uKOowQEcCAYP4LzKQq7HI+pJLEhVA/+TqO3P1UWM7goG53VnY9fQa' +
-        'iZWSHVZ9vnOVkYH1JcdL1QceBZFk91bQeaIVDQ2xI6gcFw1eSIP7WTsy/FnkB1tZvyTILy7qqgDypQdrwX5DxsJrlNfipcpO1qhbO10U45' +
-        'O7gH0QBDcX0XUAZ0WgJNB9+7ag76M0Jag9HnJYBthDO9aukkX8ATeK2hjX/i+OU9owlK229sKszmqKsWfCjY+yhP6KQhdWyrkelR5n9ikw' +
-        'PL/IwhdVMJRRKWXImwItmbzhP4JQkWaAc3Qquwog3OCvb/yhOaDUCelejdIkCqPrM2/84SOBaGrSjqrejllcXGwm9sOihXvLSUcdZMEXB9' +
-        'sT9UeZPPITFAabtNJFXmiFWKlcbD2IUtkMgjd2YaDXpCA28L3qTyhhy2dtsMFjXd7OWXxffBzf57QUE5AG1sY7iWJkeBnHuc3Ev4sCI83M' +
-        'dxLEqQOZtbXRDPheLE6IfW2InpNYkh6LZH191gzhQGpw51V2BNkek0CXgn+ZhWoPJ4PSqekDiDLQ+KGHJ/PFVEcxM9BcUbqAPaaxFpMB5/' +
-        'T2mjU3RuU80a3SazC3uDzX9zVrqFxy0vinRy/cb8WwqCUOXtNYq36mViUOo2lrhbLtbHjnliUCtpLyhgs0lD+Uno9dlkHgdcwJB2x0WeNx' +
-        'JVljBbtiteezeFV3FjC14iUsWOyyy6nrsxEP75u4HQRP+B1PCndHTZI19N+6VffhEfxsvoCMJ5Oe5TcE6MtSNSwGd81CaLTMa3EEZvFkQI' +
-        'kaliJZ9Unzk7GrJSx234rFfFrQRJZ9OE+6bjM26hFkuqEVAB21LXJ/qlmVOp4L0j11t42ba2R7vm342ZcITULhqQEN4ffpX9NTOELqQU6V' +
-        'z78szhz8R97QrguyjuKPgAAAABJRU5ErkJggg=="]');
+    localStorage.setItem('images', nullimg);
 } catch {
     console.log(Error);
 }
@@ -39,6 +42,7 @@ function saveBookMark(e) {
     var disc = document.getElementById('siteDesc').value;
     var images = JSON.parse(localStorage.getItem('images'));
 
+    //Defines a bookmark object.
     var bookMark = {
         name: siteName,
         url: siteURL,
@@ -61,6 +65,7 @@ function saveBookMark(e) {
     e.preventDefault();
     location.reload(true);
 
+    //Removes the image and the url from the temporary holding variable.
     localStorage.setItem('images', null);
     localStorage.removeItem('tempURL');
 }
@@ -74,11 +79,13 @@ function visitSite(URL) {
 function deleteBookMark(URL) {
     console.log("Deleting BookMark" + URL);
     var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+    //Finds the bookmark and then splices it.
     for (var i = 0; i < bookmarks.length; i++) {
         if (bookmarks[i].url == URL) {
             bookmarks.splice(i, 1);
         }
     }
+    //Re-save the updated list to local storage.
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     location.reload(true);
 }
@@ -115,10 +122,11 @@ async function fetchBookMarks() {
     var allBookMarks = document.getElementById('allBookMarks');
     const map = new Map();
 
-    // First gets the status of every website.
+    //First gets the status of every website.
     for (var i = 0; i < bookmarks.length; i++) {
         pingURL(bookmarks[i].url, map, i);
     }
+    //Wait for pings to finish.
     setTimeout(() => {
         var allBookMarks = document.getElementById('allBookMarks');
         for (var i = 0; i < bookmarks.length; i++) {
@@ -142,7 +150,7 @@ async function fetchBookMarks() {
         }
     }, 1500)
 
-    // Reload Page every 60 seconds to check availibility.
+    //Reload Page every 60 seconds to check availibility.
     setTimeout(() => {
         location.reload(true);
     }, 60000)
@@ -150,7 +158,7 @@ async function fetchBookMarks() {
 
 /**Pings the given url and adds the response to a hashmap based on item index.*/
 function pingURL(URL, map, i) {
-    //Settings for ping.
+    //Settings for the ping.
     var settings = {
         cache: false,
         dataType: "jsonp",
@@ -176,7 +184,7 @@ function pingURL(URL, map, i) {
         },
     };
 
-    /**Sends the request and observes the response*/
+    //Sends the request and observes the response.
     $.ajax(settings).done(function (response) {
         responses.push("down");
     });
@@ -194,7 +202,7 @@ function loadSortPage() {
     draggable(bookmarks);
 }
 
-/**Allows items to be drug to be sorted.*/
+/**Allows items to be drug to be sorted. Thanks StackOverFlow ;)*/
 function draggable(bookmarks) {
     var items = document.querySelectorAll("#sortlist div"),
         dragged = null;
@@ -202,18 +210,6 @@ function draggable(bookmarks) {
     for (let i of items) {
         i.addEventListener("dragstart", function () {
             dragged = this;
-        });
-
-        i.addEventListener("dragenter", function () {
-
-        });
-
-        i.addEventListener("dragleave", function () {
-
-        });
-
-        i.addEventListener("dragend", function () {
-
         });
 
         i.addEventListener("dragover", function (evt) {
@@ -246,7 +242,6 @@ function draggable(bookmarks) {
             }
         });
     }
-
 }
 
 /**Temporarily stores the URL and opens the edit page.*/
@@ -260,23 +255,33 @@ function submitEdit() {
     if (document.getElementById('newsiteName').value.length > 10) {
         alert("Website Name Too Long, Max Size is 10 characters");
         return 0;
-    } if (document.getElementById('newsiteURL').value.length < 1) {
-        alert("URL field empty.")
-        return 0;
     } if (document.getElementById('newsiteDesc').value.length > 30) {
         alert("Description Too Long, Max Size is 25 characters");
         return 0;
     }
 
+    // Checks for new inputs and edits the bookmark selected.
     var URL = localStorage.getItem('tempURL');
     var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
     for (var i = 0; i < bookmarks.length; i++) {
         if (bookmarks[i].url == URL) {
-            bookmarks[i].url = document.getElementById('newsiteURL').value;
-            bookmarks[i].name = document.getElementById('newsiteName').value;
-            bookmarks[i].description = document.getElementById('newsiteDesc').value;
-            var images = JSON.parse(localStorage.getItem('images'));
-            bookmarks[i].img = images;
+            if (document.getElementById('newsiteURL').value.length > 0) {
+                bookmarks[i].url = document.getElementById('newsiteURL').value;
+                console.log('penis');
+            } else {
+                bookmarks[i].url = URL;
+            }
+            if (document.getElementById('newsiteName').value.length > 0) {
+                bookmarks[i].name = document.getElementById('newsiteName').value;
+            }
+            if (document.getElementById('newsiteDesc').value.length > 0) {
+                bookmarks[i].description = document.getElementById('newsiteDesc').value;
+            }
+            if (localStorage.getItem('images') != nullimg) {
+                var images = JSON.parse(localStorage.getItem('images'));
+                bookmarks[i].img = images;
+            }
+            localStorage.setItem('images', nullimg);
         }
     }
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
