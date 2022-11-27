@@ -69,7 +69,7 @@
 }
 
 #buttonIcon {
-    width: 2vh;
+    width: 100%;
     position: relative;
     margin: auto;
 }
@@ -98,7 +98,7 @@
     height: 40px;
     position: absolute;
     top: 5px;
-    left: 15vh;
+    left: 200px;
     clip-path: circle();
 }
 
@@ -223,9 +223,6 @@
     top: -8vh;
     height: 11vh;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .bookmarkArea {
@@ -237,7 +234,7 @@
     left: 15%;
     border-radius: 3px;
     height: 50px;
-    top: -14.5vh;
+    top: -12vh;
 }
 
 .title {
@@ -245,6 +242,7 @@
     color: rgb(231, 233, 235);
     text-align: center;
     position: relative;
+    top: 40px;
 }
 
 .v {
