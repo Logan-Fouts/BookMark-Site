@@ -69,7 +69,7 @@
 }
 
 #buttonIcon {
-    width: 2vh;
+    width: 100%;
     position: relative;
     margin: auto;
 }
@@ -98,7 +98,7 @@
     height: 40px;
     position: absolute;
     top: 5px;
-    left: 15vh;
+    left: 200px;
     clip-path: circle();
 }
 
@@ -211,7 +211,7 @@
     width: 85%;
     position: relative;
     left: 7.5%;
-    top: 40px;
+    top: 4vh;
     background-color: #1e1e1f;
     resize: none;
     min-width: 250px;
@@ -234,7 +234,7 @@
     left: 15%;
     border-radius: 3px;
     height: 50px;
-    top: -14.5vh;
+    top: -12vh;
 }
 
 .title {
