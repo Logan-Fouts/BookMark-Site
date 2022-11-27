@@ -211,7 +211,7 @@
     width: 85%;
     position: relative;
     left: 7.5%;
-    top: 40px;
+    top: 4vh;
     background-color: #1e1e1f;
     resize: none;
     min-width: 250px;
@@ -223,6 +223,9 @@
     top: -8vh;
     height: 11vh;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bookmarkArea {
@@ -242,7 +245,6 @@
     color: rgb(231, 233, 235);
     text-align: center;
     position: relative;
-    top: 40px;
 }
 
 .v {
